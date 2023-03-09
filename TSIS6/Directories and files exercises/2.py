@@ -1,8 +1,8 @@
 #Write a Python program to check for access to a specified path. Test the existence, readability, writability and executability of the specified path
 import os
 
-path = '/path/to/check'
 
+path = input("Path:")
 
 if os.path.exists(path):
     print(f"{path} exists.")
@@ -18,7 +18,6 @@ if os.access(path, os.W_OK):
     print(f"{path} is writable.")
 else:
     print(f"{path} is not writable.")
-
 
 if os.access(path, os.X_OK):
     print(f"{path} is executable.")

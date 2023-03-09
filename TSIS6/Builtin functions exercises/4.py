@@ -7,19 +7,15 @@ Square root of 25100 after 2123 miliseconds is 158.42979517754858"""
 import time
 import math
 
-
 number = int(input("Enter a number: "))
 
 
-delay = int(input("Enter delay in milliseconds: "))
-
+delay = int(input("Milliseconds: "))
 
 delay /= 1000
 
 time.sleep(delay)
 
-
 result = math.sqrt(number)
 
-# Print the result
 print(f"Square root of {number} after {delay*1000} milliseconds is {result}")

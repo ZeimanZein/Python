@@ -2,7 +2,6 @@
 
 my_tuple = (True, True, False, True)
 
-
 if all(my_tuple):
     print("All elements are true")
 else:
