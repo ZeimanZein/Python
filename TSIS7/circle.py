@@ -5,7 +5,7 @@ screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption('Zeiman_games')
 
 ball_position = [400,300]
-speed = 20
+speed = 40
 
 running = True
 while running:

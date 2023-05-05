@@ -147,7 +147,7 @@ def drawRhombus(screen, color, mouse_pos):
 
 
 def taskBar():
-
+    
     menu = pygame.image.load("Menu.png").convert_alpha()
     surface.blit(menu, (0, 0))
 

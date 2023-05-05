@@ -30,7 +30,7 @@ pygame.display.set_icon(pygame.image.load("Snake_icon.png"))
 pygame.time.set_timer(pygame.USEREVENT, 1000)
 snake_position = [105, 45]
 start_tick = pygame.time.get_ticks()
-pygame.mixer.Channel(4).play(pygame.mixer.Sound("Theme.mp3"))
+
 
 # defining first 4 blocks of snake body
 
@@ -212,7 +212,7 @@ while exit:
 
     snake_body.insert(0, list(snake_position))
     if snake_position[0] == fruit_position[0] and snake_position[1] == fruit_position[1]:
-        if fruit_color == yellow:
+        if fruit_color == green:
             score += 70
         elif fruit_color == green:
             score += 30
@@ -242,7 +242,7 @@ while exit:
             fruit_position = check(spawn())
             count += 1
 
-    if fruit_color == yellow:
+    if fruit_color == green:
         seconds = (tick-start_tick)/1000
         if seconds > 4.5:
             fruit_position = check(spawn())
@@ -257,9 +257,9 @@ while exit:
                          pygame.Rect(pos[0], pos[1], 15, 15))
 
     if count % 10 == 0 and count > 0:
-        pygame.draw.rect(game_window, yellow, pygame.Rect(
+        pygame.draw.rect(game_window, green, pygame.Rect(
             fruit_position[0], fruit_position[1], 15, 15))
-        fruit_color = yellow
+        fruit_color = green
         tick = pygame.time.get_ticks()
 
     elif count % 5 == 0 and count > 0:
